@@ -20,7 +20,11 @@ app.use((req, res, next) => {
 
 /*ROUTES*/
 app.get('/', (req, res) => {
-    res.send('<h1>Hello Express</h1>')
+    res.render('home.pug', {
+        title: 'Home Page',
+        heading: 'Home',
+        message: 'This is home',
+    })
 });
 
 app.get('/about', (req, res) => {
